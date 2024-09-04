@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--gray-100);
+} 
+input, textarea {
+  color: var(--blue-gray-500); 
+}
+:root {
+  --blue-400: #0078FF;
+  --blue-500: #177EF3;
+  --blue-700: #0259BB;
+  --blue-gray-500: #435265;
+  --gray-100: #E2ECF2;
+  --gray-200: #DEE5E9;
+  --gray-300: #D6D4D4;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-blue-700 {
+  scrollbar-color: #0259BB #e0e0e0;
+}
+
+.scrollbar-thumb-blue-700::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thumb-blue-700::-webkit-scrollbar-thumb {
+  background-color: #0259BB;
+  border-radius: 10px;
+}

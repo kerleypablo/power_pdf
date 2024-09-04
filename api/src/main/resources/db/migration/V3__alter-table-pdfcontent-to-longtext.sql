@@ -1,0 +1,1 @@
+ALTER TABLE marge_history MODIFY COLUMN pdf_content LONGTEXT;

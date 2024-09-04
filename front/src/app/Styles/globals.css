@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--gray-100);
+} 
+
+
+:root {
+  --blue-400: #0078FF;
+  --blue-500: #177EF3;
+  --blue-700: #0259BB;
+  --blue-gray-500: #435265;
+  --gray-100: #E2ECF2;
+  --gray-200: #DEE5E9;
+  --gray-300: #D6D4D4;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
