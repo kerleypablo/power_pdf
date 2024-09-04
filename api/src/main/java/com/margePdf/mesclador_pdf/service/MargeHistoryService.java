@@ -1,5 +1,6 @@
 package com.margePdf.mesclador_pdf.service;
 
+import com.margePdf.mesclador_pdf.dto.MergesPerDayDTO;
 import com.margePdf.mesclador_pdf.model.MargeHistory;
 import com.margePdf.mesclador_pdf.repository.MargeHistoryRepository;
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
@@ -63,5 +64,9 @@ public class MargeHistoryService {
         byte[] mergedPdfBytes = mergedPdfOutputStream.toByteArray();
         return Base64.getEncoder().encodeToString(mergedPdfBytes);
 
+    }
+
+    public List<MergesPerDayDTO> getMergesPerDay() {
+        return margeHistoryRepository.findMergesPerDay();
     }
 }

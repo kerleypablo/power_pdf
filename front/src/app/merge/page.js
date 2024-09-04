@@ -7,6 +7,7 @@ import HistoryList from '../components/HistoryList';
 import { fetchHistory, mergePdfs } from '../utils/api';
 import { useUser } from '../context/userContext';
 
+
 export default function MergePage() {
   const { email, error, setError } = useUser();
   const [selectedFiles, setSelectedFiles] = useState([]);

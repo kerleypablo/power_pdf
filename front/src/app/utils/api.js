@@ -1,6 +1,8 @@
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+
 export const fetchHistory = async (email) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/merge-history/${email}`);
+      const response = await fetch(`${apiUrl}/api/merge-history/${email}`);
       if (!response.ok) {
         throw new Error('Erro ao buscar histórico');
       }
@@ -17,7 +19,7 @@ export const fetchHistory = async (email) => {
   export const mergePdfs = async (email, fileName, pdfContentList) => {
     try {
         debugger
-      const response = await fetch('http://localhost:8080/api/merge-history', {
+      const response = await fetch(`${apiUrl}/api/merge-history`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

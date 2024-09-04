@@ -2,6 +2,7 @@ package com.margePdf.mesclador_pdf.controller;
 
 import com.margePdf.mesclador_pdf.dto.MargeHistoryDTO;
 import com.margePdf.mesclador_pdf.dto.MargeRequestDTO;
+import com.margePdf.mesclador_pdf.dto.MergesPerDayDTO;
 import com.margePdf.mesclador_pdf.model.MargeHistory;
 import com.margePdf.mesclador_pdf.service.MargeHistoryService;
 import jakarta.validation.Valid;
@@ -89,6 +90,11 @@ public class MergeHistoryController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @GetMapping("/merges-por-dia")
+    public List<MergesPerDayDTO> getMergesPerDay() {
+        return margeHistoryService.getMergesPerDay();
     }
 
 }
