@@ -1,10 +1,10 @@
 # Projeto de Mesclagem de PDFs
 
 ## Descrição
-Este projeto é uma aplicação web para mesclagem de múltiplos arquivos PDF. O usuário pode fazer upload de PDFs, fornecer um e-mail e receber o arquivo final mesclado. A aplicação também permite visualizar um histórico das mesclagens realizadas.
+Este projeto é uma aplicação web para mesclagem de múltiplos arquivos PDF. O usuário pode fazer upload de PDFs, fornecer um e-mail e receber o arquivo final mesclado. A aplicação também permite visualizar um histórico das mesclagens realizadas,além de oferecer uma página de relatórios com gráficos mostrando o número de mesclagens por dia.
 
 ## Tecnologias Utilizadas
-- **Front-end**: Next.js, React, Context API, Tailwind CSS
+- **Front-end**: Next.js, React, Context API, Tailwind CSS, Chart.js (para gráficos)
 - **Back-end**: Spring Boot, Java, JPA, Flyway
 - **Banco de Dados**: MySQL
 - **Outras**: PDFBox para manipulação de PDFs, Docker (opcional), Postman para testar a API
@@ -20,8 +20,8 @@ Este projeto é uma aplicação web para mesclagem de múltiplos arquivos PDF. O
 ### Backend
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio/api
+   git clone https://github.com/kerleypablo/power_pdf.git
+   cd power_pdf/api
 
 
  2.  Configure o banco de dados MySQL:
@@ -50,7 +50,13 @@ Este projeto é uma aplicação web para mesclagem de múltiplos arquivos PDF. O
    ```bash
    npm install
 
-3. Execute a aplicação:
+   Configure a variável de ambiente para apontar a URL correta da API:
+
+3. Crie um arquivo .env.local na pasta front com o seguinte conteúdo:
+   ```bash
+   NEXT_PUBLIC_API_URL=http://localhost:8080
+
+4. Execute a aplicação:
 
    ```bash
    npm run dev
@@ -64,6 +70,12 @@ Este projeto é uma aplicação web para mesclagem de múltiplos arquivos PDF. O
 - Download de arquivos mesclados
 
 - Para testar a API, você pode utilizar o Postman ou outra ferramenta similar.
+
+- Relatório com gráficos: A aplicação agora conta com uma página de relatórios que exibe um gráfico de barras representando o número de mesclagens feitas por dia.
+
+  ### Página de Relatórios
+A página de relatórios pode ser acessada em: /merge/relatorios
+O gráfico é gerado utilizando o Chart.js, exibindo as datas e o total de mesclagens realizadas em cada dia.
 
 ### Como Contribuir
 Contribuições são bem-vindas! Para contribuir:
