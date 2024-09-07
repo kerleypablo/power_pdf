@@ -41,7 +41,7 @@ export default function MergePage() {
       const pdfContentList = await Promise.all(
         Array.from(selectedFiles).map((file) => convertToBase64(file))
       );
-debugger
+
       const result = await mergePdfs(email, pdfName, pdfContentList);
 
       if (result) {

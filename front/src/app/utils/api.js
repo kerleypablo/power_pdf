@@ -18,7 +18,7 @@ export const fetchHistory = async (email) => {
 
   export const mergePdfs = async (email, fileName, pdfContentList) => {
     try {
-        debugger
+  
       const response = await fetch(`${apiUrl}/api/merge-history`, {
         method: 'POST',
         headers: {
